@@ -10,8 +10,8 @@ We offer no guarantees as to it's safety or your sanity.
 ## Setup
 
 1. Deploy the rails app somewhere
-2. Update `config.domain` in `/config/development/production.rb` to point at your server. This is used as the callback for typeform.
-3. Update `.env` to your Typeform Key
+2. Update `config.domain` in `/config/production.rb` to point at your server. This is used as the callback for typeform.
+3. In `.env`, set `PUSHER_URL` to your url from Pusher, and `TYPEFORM_KEY` to your API key from Typeform.io.
 4. Head to the app in your web browser
 
 ## Screenshots
