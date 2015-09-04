@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TypeQuest</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
+</head>
+<body>
+
+<%= yield %>
+
+<script src="https://js.pusher.com/2.2/pusher.min.js"></script>
+<%= javascript_include_tag 'application' %>
+
+</body>
+</html>

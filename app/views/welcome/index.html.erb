@@ -1,0 +1,48 @@
+<div id="introduction">
+  <div class="intro-text">
+    <h1><strong>Type</strong>Quest <span class="blinking-cursor">|</span></h1>
+    <h2>Hit return to get started</h2>
+  </div>
+  <input class="grab-focus" autofocus></input>
+</div>
+<div id="content">
+	<div id="died">
+    <div id="died-text">
+     <h2>You Died</h2>
+     <h3>As you lie on the floor in a heap you just can't help but wonder why you bothered getting up this morning.</h3>
+     <%= link_to "Try Again", root_url, class: 'btn btn-primary btn-lg' %>
+   </div>
+  </div>
+  <div id="win">
+    <div id="win-text">
+     <h2>You Win</h2>
+     <h3>Good for you. Hurray. Good Job.</h3>
+     <h4>
+      So far, there have been <%= @games %> games, of which <%= @wins %>
+      were wins and <%= @losses %> were losses.<br />
+      If you're super interested<sup>*</sup> you can call <s>+13342465297</s> for live information.
+     </h4>
+     <h4>There's more than one way to win, would you like to</h4>
+     <%= link_to "Try Again?", root_url, class: 'btn btn-primary btn-lg' %>
+     <br /><br />* Nerd
+   </div>
+  </div>
+	<div class="center-loader" style="display:none;">
+		<div class="loader"></div>
+	</div>
+	<iframe data-src="<%= @step0_url %>" frameborder="0" height="100%" width="100%"></iframe>
+</div>
+
+<script>
+  var currentUser = "<%= @current_user %>";
+  var musicURLs = {
+    lose: "<%= audio_path('dead.mp3') %>",
+    prelude: "<%= audio_path('prelude.mp3') %>",
+    playing: "<%= audio_path('in-game.mp3') %>",
+    win: "<%= audio_path('you-win.mp3') %>",
+  }
+</script>
+
+<audio id="music" controls="controls" loop="loop">
+  <source type="audio/mpeg">
+</audio>

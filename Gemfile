@@ -1,0 +1,16 @@
+source "https://rubygems.org"
+
+gem "rails", "4.2.4"
+
+gem "coffee-rails"
+gem "dotenv-rails"
+gem "faraday"
+gem "faraday_middleware"
+gem "jquery-rails"
+gem "ox"
+gem "pg"
+gem "puma"
+gem "pusher"
+gem "rubytypeformio"
+gem "sass-rails"
+gem "uglifier"
